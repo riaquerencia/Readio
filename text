@@ -1,0 +1,16 @@
+<Route path="/all-books" element={<AllBooks />} />
+          <Route path="/Signup" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
+          'bg-zinc-800 h-screen absolute top-0 left-0 w-full z-40'
+
+          <div className={`${MobileNav}bg-zinc-800 h-screen absolute top-0 left-0 w-full z-40 flex flex-col items-center justify-center`}>
+      
+             {links.map((items,i)=>(
+                <Link to={items.link} className={`${MobileNav}text-white text-4xl hover:text-blue-500 transition-all duration-300 mb-8" key={i}>{items.title}</Link>
+            ))}
+            
+            <Link to="SignUp " className={`${MobileNav}px-8 py-2 bg-blue-500 rounded hover:bg-white hover:text-zinc-800 transition-all duration-300 mb-8 text-3xl font-semibold text-white'>Sign up</Link>
+            <Link to="/LogIn" className={`${MobileNav} px-8 py-2 border border-blue-500 rounded  hover:bg-white hover:text-zinc-800 transition-all duration-300 mb-8 text-3xl font-semibold text-white`>Login</Link>
+          
+      
+    </div>
